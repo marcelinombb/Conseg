@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+ 
+<html>
+  <head>
+  <title>Bem Vindo Conseg</title>
+  <meta name="description" content="Bem Vindo Conseg">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  
+  </head>
+
+ <body>
+    <form action="Script_do_Formulario.php" method="post">
+    
+    <div class="container-fluid ">
+      <p>
+      <h1>Bem-Vindo a Conseg</h1>
+      </p>
+    <hr>
+  <!-- DADOS PESSOAIS-->
+  <p>
+  <div class="border col-10 p-3 mb-2 bg-transparent text-dark">
+  </p>
+  <p>
+  <h3 class="ml-2">Dados Pessoais</h3>
+  </p>
+  <br>
+    
+    <div class="row">
+      <div class="form-group">
+      <label class="ml-5" for="textNome">Nome:</label>
+       <input class="form-group col-8 " type="text" name="nome">
+      </div>
+      <div class="form-group">
+      <label class="ml-3" for="textSobrenome">Sobrenome:</label>
+       <input class="form-group col-6" type="text" name="nome">
+      </div>
+      <div class="form-group">
+      <label class="ml-4" for="textSobrenome">Data de nascimento:</label>
+       <input class="form-group" type="date" name="nome">
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="form-group">
+      <label class="ml-5" for="textNome">RG:</label>
+      <input class="col-8" type="text" name="rg" size="13" maxlength="13">
+      </div>
+      <div class="form-group">
+      <label class="ml-3" for="textSobrenome">CPF:</label>
+      <input type="text" name="cpf" size="9" maxlength="9"> - <input type="text" name="cpf2" size="2" maxlength="2">
+      </div>
+      <div class="form-group">
+      <label class="ml-3" for="textSobrenome">Data de Expedição:</label>
+       <input class="form-group" type="date" name="nome">
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="border col-10 p-3 mb-2 bg-transparent text-dark">
+  <p>
+  <h3 class="ml-2">Endereço</h3>
+  </p>  
+    <br>
+  <div class="row">
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Cidade:</label>
+    <input  class="col-6" type="text" name="cidade">
+  </div>
+
+  <div class="form-group">
+  <label class="ml-3" for="textSobrenome">Estado:</label>
+    <select name="estado"> 
+      <option value="ac">Acre</option> 
+      <option value="al">Alagoas</option> 
+      <option value="am">Amazonas</option> 
+      <option value="ap">Amapá</option> 
+      <option value="ba">Bahia</option> 
+      <option value="ce">Ceará</option> 
+      <option value="df">Distrito Federal</option> 
+      <option value="es">Espírito Santo</option> 
+      <option value="go">Goiás</option> 
+      <option value="ma">Maranhão</option> 
+      <option value="mt">Mato Grosso</option> 
+      <option value="ms">Mato Grosso do Sul</option> 
+      <option value="mg">Minas Gerais</option> 
+      <option value="pa">Pará</option> 
+      <option value="pb">Paraíba</option> 
+      <option value="pr">Paraná</option> 
+      <option value="pe">Pernambuco</option> 
+      <option value="pi">Piauí</option> 
+      <option value="rj">Rio de Janeiro</option> 
+      <option value="rn">Rio Grande do Norte</option> 
+      <option value="ro">Rondônia</option> 
+      <option value="rs">Rio Grande do Sul</option> 
+      <option value="rr">Roraima</option> 
+      <option value="sc">Santa Catarina</option> 
+      <option value="se">Sergipe</option> 
+      <option value="sp">São Paulo</option> 
+      <option value="to">Tocantins</option> 
+    </select>
+  </div>
+  <div class="form-group">
+  <label class="ml-3" for="textSobrenome">Escolaridade:</label>
+    <input class="col-6" type="text" name="cidade">
+  </div>
+  </div>
+  
+    <div class="row">
+      <div class="form-group">
+      <label class="ml-5" for="textNome">Pai:</label>
+       <input class="form-group col-8 " type="text" name="nome">
+      </div>
+      <div class="form-group">
+      <label class="ml-3 for="textSobrenome">Mãe:</label>
+      <input class="form-group " type="text" name="nome">
+      </div>
+      <div class="form-group">
+      <label class="ml-3" for="textSobrenome">Nome do conje:</label>
+       <input class="form-group" type="text" name="nome">
+      </div>
+      <div class="form-group">
+      <label class="ml-3" for="textSobrenome">Data de Nascimento:</label>
+      <input class="form-group" type="date" name="nome">
+      </div>
+    </div>
+
+  
+
+  <!-- ENDEREÇO -->
+  <div class="row">
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Rua:</label>
+    <input type="text" name="rua">
+  </div>
+
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Numero:</label>
+     <input type="text" name="numero" size="4">
+  </div>
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">CEP:</label>
+   <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+   </div>
+   <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Bairro:</label>
+     <input type="text" name="bairro">
+  </div>
+  </div>
+  
+
+  <div class="row">
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Cidade:</label>
+    <input type="text" name="cidade">
+  </div>
+
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Estado:</label>
+    <select name="estado"> 
+      <option value="ac">Acre</option> 
+      <option value="al">Alagoas</option> 
+      <option value="am">Amazonas</option> 
+      <option value="ap">Amapá</option> 
+      <option value="ba">Bahia</option> 
+      <option value="ce">Ceará</option> 
+      <option value="df">Distrito Federal</option> 
+      <option value="es">Espírito Santo</option> 
+      <option value="go">Goiás</option> 
+      <option value="ma">Maranhão</option> 
+      <option value="mt">Mato Grosso</option> 
+      <option value="ms">Mato Grosso do Sul</option> 
+      <option value="mg">Minas Gerais</option> 
+      <option value="pa">Pará</option> 
+      <option value="pb">Paraíba</option> 
+      <option value="pr">Paraná</option> 
+      <option value="pe">Pernambuco</option> 
+      <option value="pi">Piauí</option> 
+      <option value="rj">Rio de Janeiro</option> 
+      <option value="rn">Rio Grande do Norte</option> 
+      <option value="ro">Rondônia</option> 
+      <option value="rs">Rio Grande do Sul</option> 
+      <option value="rr">Roraima</option> 
+      <option value="sc">Santa Catarina</option> 
+      <option value="se">Sergipe</option> 
+      <option value="sp">São Paulo</option> 
+      <option value="to">Tocantins</option> 
+    </select>
+  </div>
+
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Telefone:</label>
+     <input type="text" name="telefone">
+  </div>
+
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Celular:</label>
+    <input type="text" name="celular">
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Ponto Referencia:</label>
+    <input type="text" name="ponto de referencia">
+  </div>
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Tempo de Residencia:</label>
+  <input type="text" name="tempo de residencia">
+  </div>
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Residencia:</label>
+  <input class="ml-2" type="checkbox" name="própia" value="própia"> Própia
+                  <input class="ml-2" type="checkbox" name="alugada" value="alugada"> Alugada
+                  <input class="ml-2" type="checkbox" name="veiculo3" value="moto"> Parentes
+
+  </div>
+  </div>  
+</div>
+<br>
+<div class="border col-10 p-3 mb-2 bg-transparent text-dark">
+  <p>
+  <h3 class="ml-3">Atividades exercidas</h3>
+  </p>
+  <br>
+  <div class="row">
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Ocupação:</label> 
+  <input type="text" name="ocupação"> 
+  </div>  
+  
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Empresa:</label>
+    <input type="text" name="empresa/nb">
+  </div>
+
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Inicio:</label> 
+    <input type="date" name="nascimento">
+  </div>
+
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Endereço da Empresa:</label> 
+    <input class="col-6" type="text" name="rua">
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Telefone Da Empresa:</label> 
+    <input type="text" name="telefone da empresa">
+  </div>
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Cidade:</label>
+   <input type="text" name="cidade">
+  </div>
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">Estado:</label>
+    <select name="estado"> 
+      <option value="ac">Acre</option> 
+      <option value="al">Alagoas</option> 
+      <option value="am">Amazonas</option> 
+      <option value="ap">Amapá</option> 
+      <option value="ba">Bahia</option> 
+      <option value="ce">Ceará</option> 
+      <option value="df">Distrito Federal</option> 
+      <option value="es">Espírito Santo</option> 
+      <option value="go">Goiás</option> 
+      <option value="ma">Maranhão</option> 
+      <option value="mt">Mato Grosso</option> 
+      <option value="ms">Mato Grosso do Sul</option> 
+      <option value="mg">Minas Gerais</option> 
+      <option value="pa">Pará</option> 
+      <option value="pb">Paraíba</option> 
+      <option value="pr">Paraná</option> 
+      <option value="pe">Pernambuco</option> 
+      <option value="pi">Piauí</option> 
+      <option value="rj">Rio de Janeiro</option> 
+      <option value="rn">Rio Grande do Norte</option> 
+      <option value="ro">Rondônia</option> 
+      <option value="rs">Rio Grande do Sul</option> 
+      <option value="rr">Roraima</option> 
+      <option value="sc">Santa Catarina</option> 
+      <option value="se">Sergipe</option> 
+      <option value="sp">São Paulo</option> 
+      <option value="to">Tocantins</option> 
+    </select>
+  </div>
+
+  <div class="form-group">
+  <label class="ml-5" for="textSobrenome">CEP:</label>
+    <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+    </div>
+</div>
+
+<div class="row">
+
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Salario:</label>
+   <input type="text" name="salario">
+</div>
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Outras Rendas:</label> 
+  <input type="text" name="outras rendas">
+</div>
+</div>
+<br>
+</div>
+<br>
+<div class="border col-10 p-3 mb-2 bg-transparent text-dark">
+  <br>
+<h3 class="ml-3">Dados Contato</h3>
+<br>
+<div class="row">
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Referencia 2:</label>
+   <input type="text" name="referencia 2">
+</div>
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Telefone Ref. 2:</label>
+   <input type="text" name="telefone ref 2">
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Referencia 1:</label>
+   <input type="text" name="referencia 2">
+</div>
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Telefone Ref. 1:</label>
+   <input type="text" name="telefone ref 2">
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Email Cliente:</label>
+   <input type="text" name="email">
+</div>
+
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Vendedor:</label>
+   <input type="text" name="vendedor">
+</div>
+</div>
+</div>
+<br>
+<div class="border col-10 p-3 mb-2 bg-transparent text-dark">
+  <br>
+<h3 class="ml-3">Dados da Venda</h3>
+<br>
+<div class="row">
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Lider:</label>
+   <input type="text" name="vendedor">
+</div>
+
+<div class="form-group">
+  <label class="ml-2" for="textSobrenome">Data da venda:</label>
+   <input type="date" name="vendedor">
+</div>
+</div>
+<div class="row">
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Forma De Pagamento:</label>
+    <input class="ml-2" type="checkbox" name="a vista" value="a vista"> A Vista
+                          <input class="ml-2" type="checkbox" name="cartão de credito" value="cartão de credito"> Cartão de Credito
+                          <input class="ml-2" type="checkbox" name="financeira" value="financeira"> Financeira
+                          <input class="ml-2" type="checkbox" name="cheque" value="cheque"> Cheque
+</div>
+</div>
+<div class="row">
+<div class="form-group">
+<label class="ml-5" for="textSobrenome">Produto:</label>
+ <input type="text" name="produto">
+</div>
+
+<div class="form-group">
+<label class="ml-3" for="textSobrenome">Cor:</label>
+ <input type="text" name="cor">
+</div>
+
+<div class="form-group">
+<label class="ml-3" for="textSobrenome">Tipo Do Metal:</label>
+ <input type="text" name="tipo do metal">
+</div>
+
+<div class="form-group">
+<label class="ml-3" for="textSobrenome">Voltagem:</label>
+ <input type="text" name="voltagem">
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<label class="ml-5" for="textSobrenome">N° De Série:</label>
+ <input type="text" name="produto">
+</div>
+
+<div class="form-group">
+<label class="ml-3" for="textSobrenome">Proxima Troca Do refil:</label>
+ <input type="text" name="cor">
+</div>
+</div>
+<div class="form-group">
+  <input class="btn btn-primary ml-5 "  type="submit" value="Enviar Formulário">
+
+</div>
+</div>
+<br>
+
+
+    </form>
+
+
+ </body>
+</html>

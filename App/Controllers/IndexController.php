@@ -13,9 +13,9 @@ class IndexController extends Action {
 		$this->render('login');
 	}
 
-	public function login2() {
+	public function cadastroUsuario() {
 
-		$this->render('login2');
+		$this->render('cadastroUsuario');
 	}
 
 
