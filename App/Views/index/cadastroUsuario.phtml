@@ -24,7 +24,7 @@
     <hr>
   <!-- DADOS PESSOAIS-->
   <p>
-  <div class="border col-10 p-3 mb-2 bg-transparent text-dark">
+  <div class="border col-10 p-3 mb-2 bg-white text-dark">
   </p>
   <p>
   <h3 class="ml-2">Dados Pessoais</h3>
@@ -34,11 +34,11 @@
     <div class="row">
       <div class="form-group">
       <label class="ml-5" for="textNome">Nome:</label>
-       <input class="form-group col-8 " type="text" name="nome">
+       <input class="form-group " type="text" name="nome">
       </div>
       <div class="form-group">
       <label class="ml-3" for="textSobrenome">Sobrenome:</label>
-       <input class="form-group col-6" type="text" name="nome">
+       <input class="form-group" type="text" name="nome">
       </div>
       <div class="form-group">
       <label class="ml-4" for="textSobrenome">Data de nascimento:</label>
@@ -49,7 +49,7 @@
     <div class="row">
       <div class="form-group">
       <label class="ml-5" for="textNome">RG:</label>
-      <input class="col-8" type="text" name="rg" size="13" maxlength="13">
+      <input class="" type="text" name="rg" size="13" maxlength="13">
       </div>
       <div class="form-group">
       <label class="ml-3" for="textSobrenome">CPF:</label>
@@ -71,7 +71,7 @@
   <div class="row">
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Cidade:</label>
-    <input  class="col-6" type="text" name="cidade">
+    <input  class="form-group" type="text" name="cidade">
   </div>
 
   <div class="form-group">
@@ -108,29 +108,32 @@
   </div>
   <div class="form-group">
   <label class="ml-3" for="textSobrenome">Escolaridade:</label>
-    <input class="col-6" type="text" name="cidade">
+    <input class="" type="text" name="cidade">
   </div>
   </div>
   
     <div class="row">
       <div class="form-group">
       <label class="ml-5" for="textNome">Pai:</label>
-       <input class="form-group col-8 " type="text" name="nome">
+       <input class="form-group" type="text" name="nome">
       </div>
       <div class="form-group">
       <label class="ml-3 for="textSobrenome">Mãe:</label>
-      <input class="form-group " type="text" name="nome">
+      <input class="form-group" type="text" name="nome">
       </div>
       <div class="form-group">
       <label class="ml-3" for="textSobrenome">Nome do conje:</label>
        <input class="form-group" type="text" name="nome">
       </div>
+      </div>
+
+      <div class="row">
       <div class="form-group">
-      <label class="ml-3" for="textSobrenome">Data de Nascimento:</label>
+      <label class="ml-5" for="textSobrenome">Data de Nascimento:</label>
       <input class="form-group" type="date" name="nome">
       </div>
-    </div>
-
+      </div>
+ 
   
 
   <!-- ENDEREÇO -->
@@ -194,6 +197,7 @@
     </select>
   </div>
 
+  <div class="row">
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Telefone:</label>
      <input type="text" name="telefone">
@@ -222,6 +226,7 @@
 
   </div>
   </div>  
+  </div>
 </div>
 <br>
 <div class="border col-10 p-3 mb-2 bg-transparent text-dark">
@@ -363,19 +368,11 @@
 </div>
 
 <div class="form-group">
-  <label class="ml-2" for="textSobrenome">Data da venda:</label>
+  <label class="ml-5" for="textSobrenome">Data da venda:</label>
    <input type="date" name="vendedor">
 </div>
 </div>
-<div class="row">
-<div class="form-group">
-  <label class="ml-5" for="textSobrenome">Forma De Pagamento:</label>
-    <input class="ml-2" type="checkbox" name="a vista" value="a vista"> A Vista
-                          <input class="ml-2" type="checkbox" name="cartão de credito" value="cartão de credito"> Cartão de Credito
-                          <input class="ml-2" type="checkbox" name="financeira" value="financeira"> Financeira
-                          <input class="ml-2" type="checkbox" name="cheque" value="cheque"> Cheque
-</div>
-</div>
+
 <div class="row">
 <div class="form-group">
 <label class="ml-5" for="textSobrenome">Produto:</label>
@@ -383,17 +380,18 @@
 </div>
 
 <div class="form-group">
-<label class="ml-3" for="textSobrenome">Cor:</label>
+<label class="ml-5" for="textSobrenome">Cor:</label>
  <input type="text" name="cor">
 </div>
 
+<div class="row">
 <div class="form-group">
-<label class="ml-3" for="textSobrenome">Tipo Do Metal:</label>
+<label class="ml-5" for="textSobrenome">Tipo Do Metal:</label>
  <input type="text" name="tipo do metal">
 </div>
 
 <div class="form-group">
-<label class="ml-3" for="textSobrenome">Voltagem:</label>
+<label class="ml-5" for="textSobrenome">Voltagem:</label>
  <input type="text" name="voltagem">
 </div>
 </div>
@@ -405,18 +403,27 @@
 </div>
 
 <div class="form-group">
-<label class="ml-3" for="textSobrenome">Proxima Troca Do refil:</label>
+<label class="ml-5" for="textSobrenome">Proxima Troca Do refil:</label>
  <input type="text" name="cor">
 </div>
+
 </div>
+
+<div class="row">
+<div class="form-group">
+  <label class="ml-5" for="textSobrenome">Forma De Pagamento:</label>
+    <input class="ml-2" type="checkbox" name="a vista" value="a vista"> A Vista
+                          <input class="ml-2" type="checkbox" name="cartão de credito" value="cartão de credito"> Cartão de Credito
+                          <input class="ml-2" type="checkbox" name="financeira" value="financeira"> Financeira
+                          <input class="ml-2" type="checkbox" name="cheque" value="cheque"> Cheque
+</div>
+</div>
+</div>
+<div class="row">
 <div class="form-group">
   <input class="btn btn-primary ml-5 "  type="submit" value="Enviar Formulário">
-
 </div>
 </div>
-<br>
-
-
     </form>
 
 
