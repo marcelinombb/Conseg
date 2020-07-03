@@ -11,14 +11,46 @@ class Route extends Bootstrap {
 		$routes['home'] = array(
 			'route' => '/',
 			'controller' => 'indexController',
-			'action' => 'index'
+			'action' => 'primariRout'
 		);
 
-		$routes['index2'] = array(
+		$routes['cadastrarVenda'] = array(
+			'route' => '/cadastrarVenda',
+			'controller' => 'indexController',
+			'action' => 'cadastrarVenda'
+		);
+
+		$routes[''] = array(
 			'route' => '/cadastroUsuario',
 			'controller' => 'indexController',
 			'action' => 'cadastroUsuario'
 		);
+
+		$routes[''] = array(
+			'route' => '/cadastroUsuario',
+			'controller' => 'indexController',
+			'action' => 'cadastroUsuario'
+		);
+
+		$routes[''] = array(
+			'route' => '/cadastroUsuario',
+			'controller' => 'indexController',
+			'action' => 'cadastroUsuario'
+		);
+
+		$routes[''] = array(
+			'route' => '/cadastroUsuario',
+			'controller' => 'indexController',
+			'action' => 'cadastroUsuario'
+		);
+
+		$routes[''] = array(
+			'route' => '/cadastroUsuario',
+			'controller' => 'indexController',
+			'action' => 'cadastroUsuario'
+		);
+
+	
 
 		$this->setRoutes($routes);
 	}

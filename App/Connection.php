@@ -1,6 +1,6 @@
 <?php
 
-namespace Properts\App;
+namespace App;
 
 class Connection {
 

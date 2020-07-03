@@ -15,7 +15,7 @@
   </head>
 
  <body>
-    <form action="Script_do_Formulario.php" method="post">
+    <form action="/cadastrarVenda" method="post">
     
     <div class="container-fluid ">
       <p>
@@ -38,11 +38,11 @@
       </div>
       <div class="form-group">
       <label class="ml-3" for="textSobrenome">Sobrenome:</label>
-       <input class="form-group" type="text" name="nome">
+       <input class="form-group" type="text" name="sobrenome">
       </div>
       <div class="form-group">
       <label class="ml-4" for="textSobrenome">Data de nascimento:</label>
-       <input class="form-group" type="date" name="nome">
+       <input class="form-group" type="date" name="dataDeNascimentoDadosPessoais">
       </div>
     </div>
   
@@ -53,11 +53,11 @@
       </div>
       <div class="form-group">
       <label class="ml-3" for="textSobrenome">CPF:</label>
-      <input type="text" name="cpf" size="9" maxlength="9"> - <input type="text" name="cpf2" size="2" maxlength="2">
+      <input type="text" name="cpf" size="9" maxlength="9"> - <input type="text"size="2" maxlength="2">
       </div>
       <div class="form-group">
       <label class="ml-3" for="textSobrenome">Data de Expedição:</label>
-       <input class="form-group" type="date" name="nome">
+       <input class="form-group" type="date" name="dataDeExpedicao">
       </div>
     </div>
   </div>
@@ -71,12 +71,12 @@
   <div class="row">
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Cidade:</label>
-    <input  class="form-group" type="text" name="cidade">
+    <input  class="form-group" type="text" name="cidadeEndereco">
   </div>
 
   <div class="form-group">
   <label class="ml-3" for="textSobrenome">Estado:</label>
-    <select name="estado"> 
+    <select name="estadoEndereço"> 
       <option value="ac">Acre</option> 
       <option value="al">Alagoas</option> 
       <option value="am">Amazonas</option> 
@@ -108,29 +108,29 @@
   </div>
   <div class="form-group">
   <label class="ml-3" for="textSobrenome">Escolaridade:</label>
-    <input class="" type="text" name="cidade">
+    <input class="" type="text" name="escolaridadeEndereco">
   </div>
   </div>
   
     <div class="row">
       <div class="form-group">
       <label class="ml-5" for="textNome">Pai:</label>
-       <input class="form-group" type="text" name="nome">
+       <input class="form-group" type="text" name="pai">
       </div>
       <div class="form-group">
       <label class="ml-3 for="textSobrenome">Mãe:</label>
-      <input class="form-group" type="text" name="nome">
+      <input class="form-group" type="text" name="mae">
       </div>
       <div class="form-group">
       <label class="ml-3" for="textSobrenome">Nome do conje:</label>
-       <input class="form-group" type="text" name="nome">
+       <input class="form-group" type="text" name="nomeDoConje">
       </div>
       </div>
 
       <div class="row">
       <div class="form-group">
       <label class="ml-5" for="textSobrenome">Data de Nascimento:</label>
-      <input class="form-group" type="date" name="nome">
+      <input class="form-group" type="date" name="dataDeNascimento">
       </div>
       </div>
  
@@ -149,7 +149,7 @@
   </div>
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">CEP:</label>
-   <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+   <input type="text" name="cepAtividadesExercidas" size="5" maxlength="5"> - <input type="text" size="3" maxlength="3">
    </div>
    <div class="form-group">
   <label class="ml-5" for="textSobrenome">Bairro:</label>
@@ -161,12 +161,12 @@
   <div class="row">
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Cidade:</label>
-    <input type="text" name="cidade">
+    <input type="text" name="cidadeAtividadesExercidas">
   </div>
 
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Estado:</label>
-    <select name="estado"> 
+    <select name="estadoAtividadesExercidas"> 
       <option value="ac">Acre</option> 
       <option value="al">Alagoas</option> 
       <option value="am">Amazonas</option> 
@@ -212,15 +212,15 @@
   <div class="row">
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Ponto Referencia:</label>
-    <input type="text" name="ponto de referencia">
+    <input type="text" name="pontoDeReferencia">
   </div>
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Tempo de Residencia:</label>
-  <input type="text" name="tempo de residencia">
+  <input type="text" name="tempoDeResidencia">
   </div>
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Residencia:</label>
-  <input class="ml-2" type="checkbox" name="própia" value="própia"> Própia
+  <input class="ml-2" type="checkbox" name="residencia" value="própia"> Própia
                   <input class="ml-2" type="checkbox" name="alugada" value="alugada"> Alugada
                   <input class="ml-2" type="checkbox" name="veiculo3" value="moto"> Parentes
 
@@ -237,29 +237,34 @@
   <div class="row">
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Ocupação:</label> 
-  <input type="text" name="ocupação"> 
+  <input type="text" name="ocupacao"> 
   </div>  
   
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Empresa:</label>
-    <input type="text" name="empresa/nb">
+    <input type="text" name="empresa">
   </div>
 
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Inicio:</label> 
-    <input type="date" name="nascimento">
+    <input type="date" name="inicio">
   </div>
 
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Endereço da Empresa:</label> 
-    <input class="col-6" type="text" name="rua">
+    <input class="form-group" type="text" name="enderecoDaEmpresa">
+  </div>
+    <div class="form-group">
+  <label class="ml-5" for="textSobrenome">CEP:</label>
+    <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep" size="3" maxlength="3">
+
   </div>
   </div>
 
   <div class="row">
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Telefone Da Empresa:</label> 
-    <input type="text" name="telefone da empresa">
+    <input type="text" name="telefoneDaEmpresa">
   </div>
   <div class="form-group">
   <label class="ml-5" for="textSobrenome">Cidade:</label>
@@ -298,11 +303,7 @@
     </select>
   </div>
 
-  <div class="form-group">
-  <label class="ml-5" for="textSobrenome">CEP:</label>
-    <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
-    </div>
-</div>
+
 
 <div class="row">
 
@@ -312,7 +313,8 @@
 </div>
 <div class="form-group">
   <label class="ml-5" for="textSobrenome">Outras Rendas:</label> 
-  <input type="text" name="outras rendas">
+  <input type="text" name="outrasRendas">
+</div>
 </div>
 </div>
 <br>
@@ -324,30 +326,30 @@
 <br>
 <div class="row">
 <div class="form-group">
-  <label class="ml-5" for="textSobrenome">Referencia 2:</label>
-   <input type="text" name="referencia 2">
+  <label class="ml-5" for="textSobrenome">Referencia 1:</label>
+   <input type="text" name="primeiraReferencia">
 </div>
 <div class="form-group">
-  <label class="ml-5" for="textSobrenome">Telefone Ref. 2:</label>
-   <input type="text" name="telefone ref 2">
+  <label class="ml-5" for="textSobrenome">Telefone Ref. 1:</label>
+   <input type="text" name="primeiroTelefone">
 </div>
 </div>
 
 <div class="row">
 <div class="form-group">
-  <label class="ml-5" for="textSobrenome">Referencia 1:</label>
-   <input type="text" name="referencia 2">
+  <label class="ml-5" for="textSobrenome">Referencia 2:</label>
+   <input type="text" name="segundaReferencia">
 </div>
 <div class="form-group">
-  <label class="ml-5" for="textSobrenome">Telefone Ref. 1:</label>
-   <input type="text" name="telefone ref 2">
+  <label class="ml-5" for="textSobrenome">Telefone Ref. 2:</label>
+   <input type="text" name="segundoTelefone">
 </div>
 </div>
 
 <div class="row">
 <div class="form-group">
   <label class="ml-5" for="textSobrenome">Email Cliente:</label>
-   <input type="text" name="email">
+   <input type="text" name="emailCliente">
 </div>
 
 <div class="form-group">
@@ -364,12 +366,12 @@
 <div class="row">
 <div class="form-group">
   <label class="ml-5" for="textSobrenome">Lider:</label>
-   <input type="text" name="vendedor">
+   <input type="text" name="lider">
 </div>
 
 <div class="form-group">
   <label class="ml-5" for="textSobrenome">Data da venda:</label>
-   <input type="date" name="vendedor">
+   <input type="date" name="dataDaVenda">
 </div>
 </div>
 
@@ -387,7 +389,7 @@
 <div class="row">
 <div class="form-group">
 <label class="ml-5" for="textSobrenome">Tipo Do Metal:</label>
- <input type="text" name="tipo do metal">
+ <input type="text" name="tipoDeMetal">
 </div>
 
 <div class="form-group">
@@ -399,12 +401,12 @@
 <div class="row">
 <div class="form-group">
 <label class="ml-5" for="textSobrenome">N° De Série:</label>
- <input type="text" name="produto">
+ <input type="text" name="numeroSerie">
 </div>
 
 <div class="form-group">
 <label class="ml-5" for="textSobrenome">Proxima Troca Do refil:</label>
- <input type="text" name="cor">
+ <input type="text" name="proximaTrocaRefil">
 </div>
 
 </div>
@@ -412,7 +414,7 @@
 <div class="row">
 <div class="form-group">
   <label class="ml-5" for="textSobrenome">Forma De Pagamento:</label>
-    <input class="ml-2" type="checkbox" name="a vista" value="a vista"> A Vista
+    <input class="ml-2" type="checkbox" name="formaDePagamnto" value="a vista"> A Vista
                           <input class="ml-2" type="checkbox" name="cartão de credito" value="cartão de credito"> Cartão de Credito
                           <input class="ml-2" type="checkbox" name="financeira" value="financeira"> Financeira
                           <input class="ml-2" type="checkbox" name="cheque" value="cheque"> Cheque
