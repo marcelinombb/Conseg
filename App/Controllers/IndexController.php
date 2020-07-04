@@ -13,16 +13,6 @@ class IndexController extends Action {
 		$this->render('login');
 	}
 
-	public function cadastrarVenda() {
-
-		echo'<pre>';
-			print_r($_POST);
-		echo'</pre>';
-		// - cadastra o formulário da venda
-		// - redireciona para o painel
-
-		$this->render('painel');
-	}
 
 	public function buscaClientesCadastrados() {
 

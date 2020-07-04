@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Service\ServiceVenda;
+namespace App\Service\ServiceLogin;
 
 use MF\Model\Model;
 
-    class ServiceVenda extends Model {
+    class ServiceLogin extends Model {
 
         public function autenticarLogin() {
 
