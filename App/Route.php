@@ -14,16 +14,16 @@ class Route extends Bootstrap {
 			'action' => 'primariRout'
 		);
 
+		$routes['login'] = array(
+			'route' => '/login',
+			'controller' => 'AuthController',
+			'action' => 'autenticar'
+		);
+
 		$routes['cadastrarVenda'] = array(
 			'route' => '/cadastrarVenda',
 			'controller' => 'indexController',
 			'action' => 'cadastrarVenda'
-		);
-
-		$routes[''] = array(
-			'route' => '/cadastroUsuario',
-			'controller' => 'indexController',
-			'action' => 'cadastroUsuario'
 		);
 
 		$routes[''] = array(

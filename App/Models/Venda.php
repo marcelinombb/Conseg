@@ -2,6 +2,8 @@
 
     namespace App\Model;
 
+    use MF\Model\Model;
+    
      class Venda {
 
        private $nome;
@@ -59,7 +61,16 @@
        private $voltagem;
        private $numeroSerie;
        private $proximaTrocadeRefil;
-       private $FormadePagamento;
+       private $formadePagamento;
 
+       public function __get($atributo){
+         return $this->$atributo;
        
+        }
+
+      public function __set($atributo, $valor){
+        $this->$atributo = $valor;
+        
+      }
+
     }

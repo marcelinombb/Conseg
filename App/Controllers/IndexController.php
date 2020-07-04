@@ -10,18 +10,7 @@ class IndexController extends Action {
 
 	public function primariRout() {
 
-		$this->render('cadastroVenda');
-	}
-
-	public function loginUser() {
-
-		//Lógica para logar o usuário e acessar o cadastro da venda
-			
-			// - Testar os tipos de dados recebidos
-			// - Recebr meu user e senha 
-			// - Verifica se existe aquele usuário
-
-		$this->render('cadastroVenda');
+		$this->render('login');
 	}
 
 	public function cadastrarVenda() {
