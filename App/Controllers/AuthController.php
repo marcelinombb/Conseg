@@ -7,13 +7,16 @@ use MF\Model\Container;
 
 class AuthController extends Action {
 
-
+	
 	public function autenticar() {
-		
-		$usuario = Container::getModel('UsuarioLogin');
-
+		var_dump("aqui");
+		var_dump($_POST);
+		$usuario = Container::getModel('Venda');
+	
 		$usuario->__set('email', $_POST['email']);
 		$usuario->__set('senha', md5($_POST['senha']));
+
+		var_dump("passou");
 
 		$usuario->autenticarLogin();
 
@@ -38,3 +41,4 @@ class AuthController extends Action {
 		header('Location: /');
 	}
 }
+?>	
