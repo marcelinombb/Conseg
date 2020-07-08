@@ -1,12 +1,25 @@
 <?php
 
-namespace App\Service;
+namespace App\Models;
 
-use MF\Model\Model;
+    use MF\Model\Model;
 
-    class ServiceLogin extends Model {
+    class Usuario extends Model {
 
-        public function autenticarLogin() {
+        private $id;
+        private $nome;
+        private $email;
+        private $senha;
+
+        public function __get($atributo) {
+            return $this->$atributo;
+        }
+    
+        public function __set($atributo, $valor) {
+            $this->$atributo = $valor;
+        }
+
+        public function autenticar() {
 
             $query = "select id, nome, email from usuarios where email = :email and senha = :senha";
             $stmt = $this->db->prepare($query);
@@ -22,6 +35,7 @@ use MF\Model\Model;
             }
     
             return $this;
-        }
+        }    
 
-}
+
+    }

@@ -8,6 +8,11 @@
 
     class VendaController extends Action {
 
+        public function vendas() {
+        
+                $this->render('cadastroVenda');
+            }
+
         public function cadastrarVenda() {
 
             

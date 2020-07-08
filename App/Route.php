@@ -22,8 +22,8 @@ class Route extends Bootstrap {
 
 		$routes['cadastrarVenda'] = array(
 			'route' => '/cadastrarVenda',
-			'controller' => 'VendasController',
-			'action' => 'cadastrarVenda'
+			'controller' => 'VendaController',
+			'action' => 'vendas'
 		);
 
 		$routes[''] = array(
