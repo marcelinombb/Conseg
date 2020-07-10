@@ -1,2 +1,321 @@
+<!DOCTYPE html>
 
-<h1>TESTE</h1>
+<html>
+  <head>
+  <title>Bem Vindo Conseg</title>
+  <meta name="description" content="Bem Vindo Conseg">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
+ <body>
+  
+    <nav class="navbar navbar-light bg-light">
+      <a class=" navbar-brand ml-5" href="#"><h1><p>Bem-Vindo a Conseg, cadastre - se.<p></h1></a>
+    </nav>
+    <br>
+    <form action="Script_do_Formulario.php" method="post">
+    
+ 
+
+    <div class="ml-3 ">
+      <h2><p><strong>Dados Pessoais</p></strong> </h2>
+    </div>
+  
+
+    <div class="p-3  mb-2 bg-transparent text-dark">
+    <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Nome:</h5> </label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Digite o nome">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Sobrenome: </h5> </label>
+          <input class="form-control form-control-sm" type="text" name="sobrenome" placeholder="Digiteo o Sobrenome">
+        </div>
+        </div>
+        
+        <div class="row col-xl">
+        <div class="form-group col-1">
+          <label class="" for="textSobrenome"> <h5>Idade: </h5> </label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Idade" maxlength="2">
+        </div>
+      <div class="form-group col-4">  
+      <label class="" for="textSobrenome"><h5> Data de nascimento:  </h5></label>
+       <input class="form-control form-control-sm col-5" type="date" name="nome" >
+      </div>
+      </div>
+
+      <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>RG :</h5> </label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Digite o RG" maxlength="11">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"><h5> CPF : </h5></label>
+          <input class="form-control form-control-sm " type="text" name="cpf" size="11" maxlength="14" placeholder="Digite o CPF"> 
+        </div>
+        <div class="form-group col-4">
+      <label class="" for="textSobrenome"> <h5> Data de Expedição: </h5></label>
+       <input class="form-control form-control-sm col-5" type="date" name="nome">
+        </div>
+      </div>
+      </div>
+  
+  </div>
+
+  <p>
+  <div class="ml-3 ">
+      <h2><p><strong>Endereço</p></strong> </h2>
+    </div>
+    <br>
+  <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Rua:</h5></label>
+          <input class="form-control form-control-sm col-8" type="text" name="nome" placeholder="Digite a Rua">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>CEP:</h5></label>
+          <input class="form-control form-control-sm " type="text" name="nome" placeholder="Digite o CEP"  maxlength="9">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Cidade:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Digite a Cidade">
+        </div>
+        </div>
+        <br>
+        <div class="row col-xl">
+        <div class="form-group ml-3">
+          <label class="" for="textSobrenome"> <h5>Estado:</h5></label>
+          <select class="form-group form-group-sm"  name="estado"> 
+      <option value="ac">Acre</option> 
+      <option value="al">Alagoas</option> 
+      <option value="am">Amazonas</option> 
+      <option value="ap">Amapá</option> 
+      <option value="ba">Bahia</option> 
+      <option value="ce">Ceará</option> 
+      <option value="df">Distrito Federal</option> 
+      <option value="es">Espírito Santo</option> 
+      <option value="go">Goiás</option> 
+      <option value="ma">Maranhão</option> 
+      <option value="mt">Mato Grosso</option> 
+      <option value="ms">Mato Grosso do Sul</option> 
+      <option value="mg">Minas Gerais</option> 
+      <option value="pa">Pará</option> 
+      <option value="pb">Paraíba</option> 
+      <option value="pr">Paraná</option> 
+      <option value="pe">Pernambuco</option> 
+      <option value="pi">Piauí</option> 
+      <option value="rj">Rio de Janeiro</option> 
+      <option value="rn">Rio Grande do Norte</option> 
+      <option value="ro">Rondônia</option> 
+      <option value="rs">Rio Grande do Sul</option> 
+      <option value="rr">Roraima</option> 
+      <option value="sc">Santa Catarina</option> 
+      <option value="se">Sergipe</option> 
+      <option value="sp">São Paulo</option> 
+      <option value="to">Tocantins</option> 
+    </select>
+        </div>
+    <div class="form-group">
+    <label class="ml-3" for="textSobrenome"><h5>Escolaridade:</h5></label>
+    <select name="estado"> 
+      <option value="ac">Fundamental</option> 
+      <option value="al">Médio</option> 
+      <option value="am">Superior incompleto</option> 
+      <option value="am">Superior Completo</option> 
+      </select>
+        </div>
+        </div>
+        <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Nome do Pai:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Digite o nome do Pai">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Nome da Mãe:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Digite o nome da Mãe">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Nome do Conje:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Digite o nome do Conje">
+        </div>
+      <div class="form-group col-4">  
+      <label class="" for="textSobrenome"><h5> Data de nascimento:  </h5></label>
+       <input class="form-control form-control-sm col-4 " type="date" name="nome" >
+      </div>
+      </div>
+      <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Telefone :</h5> </label>
+          <input class="form-control form-control-sm col-8" type="text" name="nome" placeholder="Digite seu Telefone">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Celular :</h5> </label>
+          <input class="form-control form-control-sm " type="text" name="nome" placeholder="Celular">
+        </div>
+      </div>
+      <div class="row col-xl">
+      <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Ponto de Referencia :</h5> </label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Ponto de Referencia">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Tempo de Residencia :</h5> </label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Tempo Residencia">
+        </div>
+        <div class="form-group col-8">
+           <label class="ml-5" for="textSobrenome"><h5><p>Residencia:</p></h5></label>
+           <input class="ml-2" type="checkbox" name="própia" value="própia"> Própia
+                  <input class="ml-2" type="checkbox" name="alugada" value="alugada"> Alugada
+                  <input class="ml-2" type="checkbox" name="veiculo3" value="moto"> Parentes
+          </div>
+          </div>  
+    </div>
+<br>
+        <div class= "ml-3">
+          <h2><p><strong>Atividades Exercidas</p></strong> </h2>
+        </div> 
+<br>
+  <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Ocupação:</h5></label>
+          <input class="form-control form-control-sm col-10" type="text" name="nome" placeholder="Oficio">
+        </div>
+        <div class="form-group">
+          <label class="" for="textSobrenome"> <h5>Empresa:</h5></label>
+          <input class="form-control form-control-sm col-12" type="text" name="nome" placeholder="Empresa">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Endereço da Empresa:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Endereço Empresa">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"><h5> Inicio:</h5></label>
+          <input class="form-control form-control-sm col-10" type="date" name="inicio" placeholder="Ocupação">
+        </div>
+        </div>
+        <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Telefone da Empresa:</h5></label>
+          <input class="form-control form-control-sm col-10" type="text" name="nome" placeholder="Oficio">
+        </div>
+        <div class="form-group">
+          <label class="" for="textSobrenome"> <h5>Endereço Empresa:</h5></label>
+          <input class="form-control form-control-sm col-12" type="text" name="nome" placeholder="Empresa">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Cidade da Empresa:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Endereço Empresa">
+        </div>
+        </div>
+        <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Salário:</h5></label>
+          <input class="form-control form-control-sm col-10" type="text" name="nome" placeholder="Sálário">
+        </div>
+        <div class="form-group">
+          <label class="" for="textSobrenome"> <h5>Outras resdas:</h5></label>
+          <input class="form-control form-control-sm col-12" type="text" name="nome" placeholder="Rendas">
+        </div>
+        </div>
+        <br>
+        <div class= "ml-3">
+      <h2><p><strong>Dados do Contato</p></strong> </h2>
+    </div> 
+<br>
+<div class="row col-xl">
+        <div class="form-group col-3">
+          <label class="" for="textSobrenome"> <h5>Referencia 1:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Nome de Referencia 1">
+        </div>
+        <div class="form-group col-3">
+          <label class="" for="textSobrenome"> <h5>Referencia 2:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Nome de Referencia 2">
+        </div>
+        </div>
+        <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Tel. Referencia 1:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Telefone Referencia 1">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Tel.Referencia 2:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Telefone Referencia 2">
+        </div>
+        </div>
+        <div class="row col-xl">
+        <div class="form-group col-3">
+          <label class="" for="textSobrenome"> <h5>E-mail Cliente:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Telefone Referencia 1">
+        </div>
+        <div class="form-group col-3">
+          <label class="" for="textSobrenome"> <h5>Vendedor:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Telefone Referencia 2">
+        </div>
+        </div>
+        <br>
+    <div class="ml-3">
+      <h2><p><strong>Dados da Venda</p></strong> </h2>
+    </div> 
+    <br>
+    <div class="row col-xl">
+    <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Lider:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Lider Venda">
+        </div>
+      <div class="form-group col-4">  
+      <label class="" for="textSobrenome"><h5>Data da venda:</h5></label>
+       <input class="form-control form-control-sm col-4 " type="date" name="nome" >
+      </div>
+      </div>
+      <br>
+      <div class="row col-xl">
+      <div class="form-group">
+        <label class="ml-3" for="textSobrenome"><h5>Forma De Pagamento:</h5></label>
+          <input class="ml-2" type="checkbox" name="a vista" value="a vista"> A Vista
+                                <input class="ml-2" type="checkbox" name="cartão de credito" value="cartão de credito"> Cartão de Credito
+                                <input class="ml-2" type="checkbox" name="financeira" value="financeira"> Financeira
+                                <input class="ml-2" type="checkbox" name="cheque" value="cheque"> Cheque
+      </div>
+      </div>
+      <br>
+      <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Produto:</h5></label>
+          <input class="form-control form-control-sm col-10" type="text" name="nome" placeholder="Oficio">
+        </div>
+        <div class="form-group">
+          <label class="" for="textSobrenome"> <h5>Cor:</h5></label>
+          <input class="form-control form-control-sm col-12" type="text" name="nome" placeholder="Empresa">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Tipo de Metal:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Endereço Empresa">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Voltagem:</h5></label>
+          <input class="form-control form-control-sm" type="text" name="nome" placeholder="Endereço Empresa">
+        </div>
+        </div>
+        <div class="row col-xl">
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>N° De Série:</h5></label>
+          <input class="form-control form-control-sm col-10" type="text" name="nome" placeholder="Oficio">
+        </div>
+        <div class="form-group col-2">
+          <label class="" for="textSobrenome"> <h5>Proxima Troca Do refil:</h5></label>
+          <input class="form-control form-control-sm col-8" type="date" name="nome" placeholder="Empresa">
+        </div>
+        </div>
+        <div class="form-group">
+          <input class="btn btn-primary btn-lg ml-3"  type="submit" value="Enviar Formulário">
+        </div>
+    </form>
+
+ </body>
+</html> 

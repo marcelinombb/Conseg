@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Service\ServiceVenda;
+namespace App\Service;
 
 use MF\Model\Model;
 

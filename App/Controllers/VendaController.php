@@ -9,7 +9,15 @@
     class VendaController extends Action {
 
         public function vendas() {
+
+            
+            //$usuario = Container::getModel('Venda');
+    
+           
+                // - cadastra o formulário da venda
+                // - redireciona para o painel
         
+
                 $this->render('cadastroVenda');
             }
 

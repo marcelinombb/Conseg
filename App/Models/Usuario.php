@@ -36,6 +36,4 @@ namespace App\Models;
     
             return $this;
         }    
-
-
     }

@@ -2,12 +2,10 @@
 
 namespace App\Controllers;
 
-//os recursos do miniframework
 use MF\Controller\Action;
 use MF\Model\Container;
 
 class AuthController extends Action {
-
 
 	public function autenticar() {
  		
@@ -28,9 +26,10 @@ class AuthController extends Action {
 			header('Location: /cadastrarVenda');
 
 		} else {
-			header('Location: /?login=erro');
-		}
 
+			header('Location: /?login=erro');
+			
+		}
 	}
 
 	public function sair() {
