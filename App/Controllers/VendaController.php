@@ -2,7 +2,6 @@
 
     namespace App\Controllers;
 
-  
     use MF\Controller\Action;
     use MF\Model\Container;
 
@@ -10,29 +9,22 @@
 
         public function vendas() {
 
+        $this->render('cadastroVenda');
+
+        }
+
+        public function salvarVenda() {
             
-            //$usuario = Container::getModel('Venda');
-    
-           
-                // - cadastra o formulário da venda
-                // - redireciona para o painel
-        
+		//$usuario = Container::getModel('Venda');
 
-                $this->render('cadastroVenda');
-            }
-
-        public function cadastrarVenda() {
-
+            //echo'<pre>';
+                //print_r($_POST);
+            //echo'</pre>';
             
-		$usuario = Container::getModel('Venda');
-
-            echo'<pre>';
-                print_r($_POST);
-            echo'</pre>';
             // - cadastra o formulário da venda
             // - redireciona para o painel
     
-            $this->render('painel');
+            $this->render('/painel');
         }
     }
 

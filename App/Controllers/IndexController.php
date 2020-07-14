@@ -17,6 +17,11 @@ class IndexController extends Action {
 		$this->render('cadastroUsuario');
 	}
 
+	public function painel(){
+
+		$this->render('painel');
+
+	}
 }
 
 

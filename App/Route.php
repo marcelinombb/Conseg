@@ -26,16 +26,16 @@ class Route extends Bootstrap {
 			'action' => 'vendas'
 		);
 
-		$routes[''] = array(
-			'route' => '/cadastroUsuario',
-			'controller' => 'indexController',
-			'action' => 'cadastroUsuario'
+		$routes['salvarVenda'] = array(
+			'route' => '/salvarVenda',
+			'controller' => 'VendaController',
+			'action' => 'salvarVenda'
 		);
 
-		$routes[''] = array(
-			'route' => '/cadastroUsuario',
+		$routes['painel'] = array(
+			'route' => '/painel',
 			'controller' => 'indexController',
-			'action' => 'cadastroUsuario'
+			'action' => 'painel'
 		);
 
 		$routes[''] = array(
