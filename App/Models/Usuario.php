@@ -33,7 +33,7 @@ namespace App\Models;
                 $this->__set('id', $usuario['id']);
                 $this->__set('nome', $usuario['nome']);
             }
-    
-            return $this;
-        }    
-    }
+            
+                    return $this;
+                }    
+         }

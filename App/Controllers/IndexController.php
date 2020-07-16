@@ -12,17 +12,10 @@ class IndexController extends Action {
 		$this->render('login');
 	}
 
-	public function buscaClientesCadastrados() {
-
-		$this->render('cadastroUsuario');
-	}
-
 	public function painel(){
 
 		$this->render('painel');
-
 	}
 }
-
 
 ?>

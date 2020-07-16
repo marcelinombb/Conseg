@@ -109,5 +109,5 @@
         $stmt->bindValue(':proximaTrocadeRefil', $this->__get('proximaTrocadeRefil'));
         
         $stmt->execute();
-
+      }
     }
