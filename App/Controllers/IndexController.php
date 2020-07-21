@@ -15,7 +15,9 @@ class IndexController extends Action {
 	public function painel(){
 
 		$this->render('painel');
+
 	}
+
 }
 
 ?>

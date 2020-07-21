@@ -11,63 +11,46 @@ create table usuarios(
 
 create table venda(
 	id_venda int not null primary key AUTO_INCREMENT,
-	nome varchar(32) not null,
-	sobrenome varchar(32) not null,
-	idade varchar(32) not null
-  nome varchar(32) not null;
-  sobrenome varchar(32) not null;
-  dataDeNascimentoDadosPessoais varchar(32) not null;
-  rg varchar(32) not null;
-  cpf varchar(32) not null;
-  dataDeExpedicao varchar(32) not null;
-  cidadeEndereco varchar(32) not null;
-  estadoEndereço varchar(32) not null;
-  escolaridade Endereco varchar(32) not null;
-  paiEndereco varchar(32) not null;
-  maeEndereco varchar(32) not null;
-  nomeDoConjeEndereco varchar(32) not null;
-  dataDeNascimentoEndereco varchar(32) not null;
-  cidadeAtividadesExercidas varchar(32) not null;
-  estadoAtividadesExercidas varchar(32) not null;
-  escolaridade varchar(32) not null;
-  pai varchar(32) not null;
-  mae varchar(32) not null;
-  nomeDoConje varchar(32) not null;
-  dataDeNascimento varchar(32) not null;
-  rua varchar(32) not null; 
-  numero varchar(32) not null;
-  cepAtividadesExercidas varchar(32) not null;
-  bairro varchar(32) not null;
-  cidadAtividadesExercidas varchar(32) not null;
-  estadoAtividadesExercidas varchar(32) not null;
-  telefone varchar(32) not null;
-  celular varchar(32) not null;
-  pontoDeRefrencia varchar(32) not null;
-  tempoDeResidencia varchar(32) not null;
-  residencia varchar(32) not null;
-  ocupacao varchar(32) not null;
-  empresa varchar(32) not null;
-  inicio varchar(32) not null;
-  enderecoDaEmpresa varchar(32) not null;
-  cep varchar(32) not null;
-  telefoneDaEmpresa varchar(32) not null;
-  cidade varchar(32) not null;
-  estado varchar(32) not null;
-  salario varchar(32) not null;
-  outrasRendas varchar(32) not null;
-  primeiraReferencia varchar(32) not null;
-  primeiroTelefone varchar(32) not null;
-  segundaReferencia varchar(32) not null;
-  segundoTelefone varchar(32) not null;
-  emailCliente varchar(32) not null;
-  vendedor varchar(32) not null;
-  lider varchar(32) not null;
-  dataDaVenda varchar(32) not null;
-  produto varchar(32) not null;
-  cor varchar(32) not null;
-  tipoDoMetal varchar(32) not null;
-  voltagem varchar(32) not null;
-  numeroSerie varchar(32) not null;
-  proximaTrocadeRefil varchar(32) not null;
-  formadePagamento varchar(32) not null;
-);
+	nome varchar(32) ,
+	sobrenome varchar(32) ,
+	idade varchar(32) ,
+  data_nascimento_dados_pessoais varchar(32),
+  rg varchar(32) ,
+  cpf varchar(32) not null,
+  data_de_expedicao varchar(32) ,
+  rua_endereco varchar(32) ,
+  cep_endereco varchar(32),
+  cidade_endereco varchar(32),
+  estado_endereco varchar(32) ,
+  escolaridade_endereco varchar(32) ,
+  pai_endereco varchar(32) ,
+  mae_endereco varchar(32) ,
+  nome_do_conje_endereco varchar(32) ,
+  data_de_nascimento_endereco varchar(32),
+  telefone_endereco varchar(32) ,
+  telefone_celular varchar(32),
+  ponto_refrencia_endereco varchar(32) ,
+  tempo_residencia_endereco varchar(32)  ,
+  tipo_residencia varchar(32) ,
+  ocupacao_atividade varchar(32) ,
+  empresa_atividade varchar(32),
+  inicio_atividade varchar(32) ,
+  telefone_empresa_atividade varchar(32) ,
+  endereco_empresa varchar(32) ,
+  salario varchar(32) ,
+  outras_rendas varchar(32) ,
+  primeira_referencia varchar(32),
+  segunda_referencia varchar(32) ,
+  primeiro_telefone varchar(32),
+  segundo_telefone varchar(32) ,
+  email_cliente varchar(32) ,
+  vendedor varchar(32) ,
+  lider varchar(32) ,
+  data_venda varchar(32),
+  forma_pagamento varchar(32) ,
+  produto varchar(32) ,
+  cor varchar(32) ,
+  tipo_metal varchar(32) ,
+  voltagem varchar(32) ,
+  numeroSerie varchar(32) ,
+  proximaTrocadeRefil varchar(32);

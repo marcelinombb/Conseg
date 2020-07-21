@@ -17,6 +17,10 @@
             
 		$venda = Container::getModel('Venda');
 
+		echo '<pre>';
+        var_dump($_POST);
+        echo '</pre>';
+
 		$venda->__set('nome', $_POST['nome']);
 		$venda->__set('sobrenome', $_POST['sobrenome']);
 		$venda->__set('idade', $_POST['idade']);
@@ -24,18 +28,19 @@
 		$venda->__set('rg', $_POST['rg']);
 		$venda->__set('cpf', $_POST['cpf']);
 		$venda->__set('dataDeExpedicao', $_POST['dataDeExpedicao']);
-		$venda->__set('ruaEndereço', $_POST['ruaEndereço']);
-		$venda->__set('cepEndereço', $_POST['cepEndereço']);
+		$venda->__set('ruaEndereco', $_POST['ruaEndereco']);
+		$venda->__set('cepEndereco', $_POST['cepEndereco']);
 		$venda->__set('cidadeEndereco', $_POST['cidadeEndereco']);
-		$venda->__set('estadoEndereço', $_POST['estadoEndereço']);
+		$venda->__set('estadoEndereco', $_POST['estadoEndereco']);
 		$venda->__set('escolaridadeEndereco', $_POST['escolaridadeEndereco']);
 		$venda->__set('paiEndereco', $_POST['paiEndereco']);
 		$venda->__set('maeEndereco', $_POST['maeEndereco']);
 		$venda->__set('nomeDoConjeEndereco', $_POST['nomeDoConjeEndereco']);
 		$venda->__set('dataDeNascimentoEndereco', $_POST['dataDeNascimentoEndereco']);
-		$venda->__set('telefoneEndereço', $_POST['telefoneEndereço']);
-		$venda->__set('pontoDeRefrenciaEndereço', $_POST['pontoDeRefrenciaEndereço']);
-		$venda->__set('tempoDeResidenciaEndereço', $_POST['tempoDeResidenciaEndereço']);
+		$venda->__set('telefoneEndereco', $_POST['telefoneEndereco']);
+		$venda->__set('telefoneCelular', $_POST['telefoneCelular']);
+		$venda->__set('pontoDeRefrenciaEndereco', $_POST['pontoDeRefrenciaEndereco']);
+		$venda->__set('tempoDeResidenciaEndereco', $_POST['tempoDeResidenciaEndereco']);
 		$venda->__set('tipoResidencia', $_POST['tipoResidencia']);
 		$venda->__set('ocupacaoAtividade', $_POST['ocupacaoAtividade']);
 		$venda->__set('empresaAtividade', $_POST['empresaAtividade']);
@@ -52,7 +57,7 @@
 		$venda->__set('vendedor', $_POST['vendedor']);
 		$venda->__set('lider', $_POST['lider']);
 		$venda->__set('dataDaVenda', $_POST['dataDaVenda']);
-		$venda->__set('formadePagamento', $_POST['formadePagamento']);
+		$venda->__set('formaDePagamento', $_POST['formaDePagamento']);
 		$venda->__set('produto', $_POST['produto']);
 		$venda->__set('cor', $_POST['cor']);
 		$venda->__set('tipoDoMetal', $_POST['tipoDoMetal']);
@@ -61,9 +66,7 @@
 		$venda->__set('proximaTrocadeRefil', $_POST['proximaTrocadeRefil']);
 
 		$venda->salvarVenda();
-            //echo'<pre>';
-                //print_r($_POST);
-            //echo'</pre>';
+          
             
             // - cadastra o formulário da venda
             // - redireciona para o painel
