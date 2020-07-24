@@ -38,17 +38,13 @@ class Route extends Bootstrap {
 			'action' => 'painel'
 		);
 
-		$routes[''] = array(
-			'route' => '/cadastroUsuario',
-			'controller' => 'indexController',
-			'action' => 'cadastroUsuario'
+		$routes['buscaVenda'] = array(
+			'route' => '/buscaVenda',
+			'controller' => 'vendaController',
+			'action' => 'buscaVenda'
 		);
 
-		$routes[''] = array(
-			'route' => '/cadastroUsuario',
-			'controller' => 'indexController',
-			'action' => 'cadastroUsuario'
-		);
+	
 
 		$routes['sair'] = array(
 			'route' => '/sair',

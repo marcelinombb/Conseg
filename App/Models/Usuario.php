@@ -34,5 +34,6 @@ namespace App\Models;
                 $this->__set('nome', $usuario['nome']);
             }
                     return $this;
-                }    
+
+            }    
          }

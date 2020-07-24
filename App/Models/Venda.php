@@ -9,7 +9,7 @@
 
        private $id_venda;
        private $nome;
-       private $sobrenome;
+       private $nacionalidade;
        private $idade;
        private $dataDeNascimentoDadosPessoais;
        private $rg;
@@ -64,15 +64,10 @@
 
       public function salvarVenda() {
 
-        echo '<pre>';
-        var_dump($_POST);
-        echo '</pre>';
-
-        
-        $query = "insert into venda
-                (id_venda, 
+        $query = "INSERT INTO venda
+                (id_venda,
                  nome,
-                 sobrenome,
+                 nacionalidade,
                  idade,
                  data_nascimento_dados_pessoais,
                  rg,
@@ -112,12 +107,12 @@
                  cor, 
                  tipo_metal,
                  voltagem, 
-                 numero_serie, 
-                 proxima_troca_refil)
-                values
+                 numeroSerie, 
+                 proximaTrocadeRefil)
+                 VALUES
                 (:id_venda,
                  :nome, 
-                 :sobrenome, 
+                 :nacionalidade, 
                  :idade,
                  :dataDeNascimentoDadosPessoais,
                  :rg,
@@ -161,55 +156,66 @@
                  :proximaTrocadeRefil)";
         
         $stmt = $this->db->prepare($query);
-      
-        $stmt->bindValue(':id_venda', $this->__get('id_venda'), PDO::PARAM_STR);
+        $stmt->bindValue(':id_venda', $this->__get('id_venda'), PDO::PARAM_INT);
         $stmt->bindValue(':nome', $this->__get('nome'), PDO::PARAM_STR);
-        $stmt->bindValue(':sobrenome', $this->__get('sobrenome'), PDO::PARAM_STR);
+        $stmt->bindValue(':nacionalidade', $this->__get('nacionalidade'), PDO::PARAM_STR);
         $stmt->bindValue(':idade', $this->__get('idade'), PDO::PARAM_STR);
-        $stmt->bindValue(':data_nascimento_dados_pessoais', $this->__get('dataDeNascimentoDadosPessoais'), PDO::PARAM_STR);
+        $stmt->bindValue(':dataDeNascimentoDadosPessoais', $this->__get('dataDeNascimentoDadosPessoais'), PDO::PARAM_STR);
         $stmt->bindValue(':rg', $this->__get('rg'), PDO::PARAM_STR);
         $stmt->bindValue(':cpf', $this->__get('cpf'), PDO::PARAM_STR);	
-        $stmt->bindValue(':data_de_expedicao', $this->__get('dataDeExpedicao'), PDO::PARAM_STR);
-        $stmt->bindValue(':rua_endereco', $this->__get('ruaEndereco'), PDO::PARAM_STR);
-        $stmt->bindValue(':cep_endereco', $this->__get('cepEndereco'), PDO::PARAM_STR);
-        $stmt->bindValue(':cidade_endereco', $this->__get('cidadeEndereco'), PDO::PARAM_STR);	
-        $stmt->bindValue(':estado_endereco', $this->__get('estadoEndereco'), PDO::PARAM_STR);
-        $stmt->bindValue(':escolaridade_endereco', $this->__get('escolaridadeEndereco'), PDO::PARAM_STR);
-        $stmt->bindValue(':pai_endereco', $this->__get('paiEndereco'), PDO::PARAM_STR);	
-        $stmt->bindValue(':mae_endereco', $this->__get('maeEndereco'), PDO::PARAM_STR);
-        $stmt->bindValue(':nome_do_conje_endereco', $this->__get('nomeDoConjeEndereco'), PDO::PARAM_STR);	
-        $stmt->bindValue(':data_de_nascimento_endereco', $this->__get('dataDeNascimentoEndereco'), PDO::PARAM_STR);        
-        $stmt->bindValue(':telefone_endereco', $this->__get('telefoneEndereco'), PDO::PARAM_STR);	
-        $stmt->bindValue(':telefone_celular', $this->__get('telefoneCelular'), PDO::PARAM_STR);
-        $stmt->bindValue(':ponto_refrencia_endereco', $this->__get('pontoDeRefrenciaEndereco'), PDO::PARAM_STR);	
-        $stmt->bindValue(':tempo_residencia_endereco', $this->__get('tempoDeResidenciaEndereco'), PDO::PARAM_STR);
-        $stmt->bindValue(':tipo_residencia', $this->__get('tempoDeResidenciaEndereco'), PDO::PARAM_STR);
-        $stmt->bindValue(':ocupacao_atividade', $this->__get('tempoDeResidenciaEndereco'), PDO::PARAM_STR);
-        $stmt->bindValue(':empresa_atividade', $this->__get('empresaAtividade'), PDO::PARAM_STR);	
-        $stmt->bindValue(':inicio_atividade', $this->__get('inicioAtividade'), PDO::PARAM_STR);
-        $stmt->bindValue(':endereco_empresa', $this->__get('enderecoDaEmpresa'), PDO::PARAM_STR);
-        $stmt->bindValue(':telefone_empresa_atividade', $this->__get('telefoneDaEmpresaAtividade'), PDO::PARAM_STR);	
+        $stmt->bindValue(':dataDeExpedicao', $this->__get('dataDeExpedicao'), PDO::PARAM_STR);
+        $stmt->bindValue(':ruaEndereco', $this->__get('ruaEndereco'), PDO::PARAM_STR);
+        $stmt->bindValue(':cepEndereco', $this->__get('cepEndereco'), PDO::PARAM_STR);
+        $stmt->bindValue(':cidadeEndereco', $this->__get('cidadeEndereco'), PDO::PARAM_STR);	
+        $stmt->bindValue(':estadoEndereco', $this->__get('estadoEndereco'), PDO::PARAM_STR);
+        $stmt->bindValue(':escolaridadeEndereco', $this->__get('escolaridadeEndereco'), PDO::PARAM_STR);
+        $stmt->bindValue(':paiEndereco', $this->__get('paiEndereco'), PDO::PARAM_STR);	
+        $stmt->bindValue(':maeEndereco', $this->__get('maeEndereco'), PDO::PARAM_STR);
+        $stmt->bindValue(':nomeDoConjeEndereco', $this->__get('nomeDoConjeEndereco'), PDO::PARAM_STR);	
+        $stmt->bindValue(':dataDeNascimentoEndereco', $this->__get('dataDeNascimentoEndereco'), PDO::PARAM_STR);        
+        $stmt->bindValue(':telefoneEndereco', $this->__get('telefoneEndereco'), PDO::PARAM_STR);	
+        $stmt->bindValue(':telefoneCelular', $this->__get('telefoneCelular'), PDO::PARAM_STR);
+        $stmt->bindValue(':pontoDeRefrenciaEndereco', $this->__get('pontoDeRefrenciaEndereco'), PDO::PARAM_STR);	
+        $stmt->bindValue(':tempoDeResidenciaEndereco', $this->__get('tempoDeResidenciaEndereco'), PDO::PARAM_STR);
+        $stmt->bindValue(':tipoResidencia', $this->__get('tempoDeResidenciaEndereco'), PDO::PARAM_STR);
+        $stmt->bindValue(':ocupacaoAtividade', $this->__get('tempoDeResidenciaEndereco'), PDO::PARAM_STR);
+        $stmt->bindValue(':empresaAtividade', $this->__get('empresaAtividade'), PDO::PARAM_STR);	
+        $stmt->bindValue(':inicioAtividade', $this->__get('inicioAtividade'), PDO::PARAM_STR);
+        $stmt->bindValue(':telefoneDaEmpresaAtividade', $this->__get('telefoneDaEmpresaAtividade'), PDO::PARAM_STR);
+        $stmt->bindValue(':enderecoDaEmpresa', $this->__get('enderecoDaEmpresa'), PDO::PARAM_STR);	
         $stmt->bindValue(':salario', $this->__get('salario'), PDO::PARAM_STR);	
-        $stmt->bindValue(':outras_rendas', $this->__get('outrasRendas'), PDO::PARAM_STR);
-        $stmt->bindValue(':primeira_referencia', $this->__get('primeiraReferencia'), PDO::PARAM_STR);	
-        $stmt->bindValue(':segunda_referencia', $this->__get('segundaReferencia'), PDO::PARAM_STR);
-        $stmt->bindValue(':primeiro_telefone', $this->__get('primeiroTelefone'), PDO::PARAM_STR);	
-        $stmt->bindValue(':segundo_telefone', $this->__get('segundoTelefone'), PDO::PARAM_STR);
-        $stmt->bindValue(':email_cliente', $this->__get('emailCliente'), PDO::PARAM_STR);	
+        $stmt->bindValue(':outrasRendas', $this->__get('outrasRendas'), PDO::PARAM_STR);
+        $stmt->bindValue(':primeiraReferencia', $this->__get('primeiraReferencia'), PDO::PARAM_STR);	
+        $stmt->bindValue(':segundaReferencia', $this->__get('segundaReferencia'), PDO::PARAM_STR);
+        $stmt->bindValue(':primeiroTelefone', $this->__get('primeiroTelefone'), PDO::PARAM_STR);	
+        $stmt->bindValue(':segundoTelefone', $this->__get('segundoTelefone'), PDO::PARAM_STR);
+        $stmt->bindValue(':emailCliente', $this->__get('emailCliente'), PDO::PARAM_STR);	
         $stmt->bindValue(':vendedor', $this->__get('vendedor'), PDO::PARAM_STR);
         $stmt->bindValue(':lider', $this->__get('lider'), PDO::PARAM_STR);	
-        $stmt->bindValue(':data_venda', $this->__get('dataDaVenda'), PDO::PARAM_STR);
-        $stmt->bindValue(':forma_pagamento', $this->__get('formaDePagamento'), PDO::PARAM_STR);	
+        $stmt->bindValue(':dataDaVenda', $this->__get('dataDaVenda'), PDO::PARAM_STR);
+        $stmt->bindValue(':formaDePagamento', $this->__get('formaDePagamento'), PDO::PARAM_STR);	
         $stmt->bindValue(':produto', $this->__get('produto'), PDO::PARAM_STR);
         $stmt->bindValue(':cor', $this->__get('cor'), PDO::PARAM_STR);	
-        $stmt->bindValue(':tipo_metal', $this->__get('tipoDoMetal'), PDO::PARAM_STR);
+        $stmt->bindValue(':tipoDoMetal', $this->__get('tipoDoMetal'), PDO::PARAM_STR);
         $stmt->bindValue(':voltagem', $this->__get('voltagem'), PDO::PARAM_STR);	
-        $stmt->bindValue(':numero_serie', $this->__get('numeroSerie'), PDO::PARAM_STR);
-        $stmt->bindValue(':proxima_troca_refil', $this->__get('proximaTrocadeRefil'), PDO::PARAM_STR);
+        $stmt->bindValue(':numeroSerie', $this->__get('numeroSerie'), PDO::PARAM_STR);
+        $stmt->bindValue(':proximaTrocadeRefil', $this->__get('proximaTrocadeRefil'), PDO::PARAM_STR);
 
         $stmt->execute();
         
         return $this;
    
+      }
+
+      public function getAll() {
+        $query = "select nome, telefone, endereco, proximaTrocadeRefil from venda where cpf = :cpf";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindValue(':cpf', $this->__get('cpf'));
+     
+        $stmt->execute();
+    
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
+
+        var_dump($stmt);
       }
     }

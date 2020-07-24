@@ -10,35 +10,35 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheat" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+   
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
 	</head>
 
   <body>
   <nav class="navbar navbar-light bg-light">
       <a class=" navbar-brand ml-5" href="#"><h1><p>Painel de Buscas Conseg<p></h1></a>
       <div>
-      <a href="/cadastrarVenda" class="btn btn-outline-warning btn-lg far fa-address-card mr-5"style="font-size:25px"></a>
-      <a href="/sair" class="btn btn-outline-danger fas fa-sign-out-alt mr-2"style="font-size:25px"></a>
+      <a href="/cadastrarVenda" class="btn btn-primary btn-lg far fa-address-card mr-5"style="font-size:30px"></a>
+      <a href="/sair" class="btn btn-outline-primary fas fa-sign-out-alt mr-2"style="font-size:30px"></a>
       </div>
     </nav>
     <br>
-    <div class="">
 
     
     <div class="container">
       <div class="row mb-5">
         <div class="col">
-          <h1 class="display-4">Consulta de Clientes</h1>
+          <h3 class="display-4">Consulta de Clientes</h3>
         </div>
       </div>
     
       <div class="row  mb-5 col-8">
-      <form class="mt-4 mb-4">
+      <form method="post" action="/buscaVenda" class="mt-4 mb-4">
             <div class="input-group input-group-lg">
-              <input type="text" class="form-control" placeholder="Digite seu CPF">
+              <input name="cpf" type="text" class="form-control" placeholder="Digite seu CPF">
               <div class="input-group-append">
-                <button type="button" class="btn btn-primary">Buscar</button>
+                <button type="submit" class="btn btn-primary">Buscar</button>
               </div>
             </div>
           </form>
@@ -50,9 +50,9 @@
             <thead>
               <tr>
                 <th>Nome</th>
-                <th>Sobrenome</th>
                 <th>Telefone</th>
                 <th>Endereço</th>
+                <th>Troca do Refil</th>
                 <th></th>
               </tr>
             </thead>

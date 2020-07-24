@@ -17,12 +17,8 @@
             
 		$venda = Container::getModel('Venda');
 
-		echo '<pre>';
-        var_dump($_POST);
-        echo '</pre>';
-
 		$venda->__set('nome', $_POST['nome']);
-		$venda->__set('sobrenome', $_POST['sobrenome']);
+		$venda->__set('nacionalidade', $_POST['nacionalidade']);
 		$venda->__set('idade', $_POST['idade']);
 		$venda->__set('dataDeNascimentoDadosPessoais', $_POST['dataDeNascimentoDadosPessoais']);
 		$venda->__set('rg', $_POST['rg']);
@@ -67,11 +63,21 @@
 
 		$venda->salvarVenda();
           
-            
-            // - cadastra o formulário da venda
-            // - redireciona para o painel
     
             $this->render('/painel');
-        }
-    }
+		}
 
+		public function buscaVenda() {
+
+
+			$busca = Container::getModel('Venda');
+		
+			$busca->__set('cpf', $_POST['cpf']);
+
+			$busca->getAll();
+
+			$this->render('/painel');
+
+    	}
+
+	}
