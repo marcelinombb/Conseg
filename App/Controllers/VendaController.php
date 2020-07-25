@@ -69,15 +69,26 @@
 
 		public function buscaVenda() {
 
+			$pesquisarPor = isset($_GET['pesquisarPor']) ? $_GET['pesquisarPor'] : '';
 
-			$busca = Container::getModel('Venda');
-		
-			$busca->__set('cpf', $_POST['cpf']);
+			echo 'Pesquisando por: ' .$pesquisarPor;
 
-			$busca->getAll();
+			//	$pesquisarPor = array();
+	
+			if($pesquisarPor != '') {
+				$busca = Container::getModel('Venda');
+				$busca->__set('cpf', $pesquisarPor);
+				$buscas= $busca->getAll();
+
+				echo '<pre>';
+				var_dump($buscas['nome']);
+				echo '</pre>';
+			}
+
+			$this->view->buscas = $buscas;
 
 			$this->render('/painel');
-
+			}
     	}
 
-	}
+	

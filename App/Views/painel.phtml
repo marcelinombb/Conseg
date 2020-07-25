@@ -34,16 +34,16 @@
       </div>
     
       <div class="row  mb-5 col-8">
-      <form method="post" action="/buscaVenda" class="mt-4 mb-4">
+      <form method="get" action="/buscaVenda" class="mt-4 mb-4">
             <div class="input-group input-group-lg">
-              <input name="cpf" type="text" class="form-control" placeholder="Digite seu CPF">
+              <input name="pesquisarPor" type="text" class="form-control" placeholder="Digite seu CPF">
               <div class="input-group-append">
                 <button type="submit" class="btn btn-primary">Buscar</button>
               </div>
             </div>
           </form>
         </div>
-
+     
       <div class="row">
         <div class="col">
           <table class="table" >
@@ -53,16 +53,25 @@
                 <th>Telefone</th>
                 <th>Endereço</th>
                 <th>Troca do Refil</th>
-                <th></th>
               </tr>
-            </thead>
-
-            <tbody>
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+             
+              <tr>
+              <?php foreach((array)$this->view->buscas as $indice_arr => $busca) {  ?>
+                <th> <?= $buscas['nome'] ?> </th>
+                <th>  </th>
+                <th> </th>
+                <th> </th>
+              </tr>
+              <?php } ?>
+              </tbody>
+              </table>            
         </div>
       </div>
-    </div>
+            
+     
+
     
   </body>	
 

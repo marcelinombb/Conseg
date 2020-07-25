@@ -51,7 +51,7 @@
        private $voltagem;
        private $numeroSerie;  
        private $proximaTrocadeRefil;  
-       //43
+       
        public function __get($atributo){
          return $this->$atributo;
        
@@ -156,6 +156,7 @@
                  :proximaTrocadeRefil)";
         
         $stmt = $this->db->prepare($query);
+
         $stmt->bindValue(':id_venda', $this->__get('id_venda'), PDO::PARAM_INT);
         $stmt->bindValue(':nome', $this->__get('nome'), PDO::PARAM_STR);
         $stmt->bindValue(':nacionalidade', $this->__get('nacionalidade'), PDO::PARAM_STR);
@@ -208,14 +209,13 @@
       }
 
       public function getAll() {
-        $query = "select nome, telefone, endereco, proximaTrocadeRefil from venda where cpf = :cpf";
+
+        $query = "select nome, telefone_celular, rua_endereco, proximaTrocadeRefil from venda where cpf like :cpf";
         $stmt = $this->db->prepare($query);
-        $stmt->bindValue(':cpf', $this->__get('cpf'));
-     
+        $stmt->bindValue(':cpf', '%'.$this->__get('cpf').'%');
         $stmt->execute();
     
         return $stmt->fetch(\PDO::FETCH_ASSOC);
 
-        var_dump($stmt);
       }
     }
