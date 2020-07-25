@@ -86,8 +86,6 @@
 			}
 			$buscas = [["nome"=>"xablau"]];
 
-			//$this->setBuscas($buscas);
-
 			$this->render('/painel',$buscas);
 			}
     	}

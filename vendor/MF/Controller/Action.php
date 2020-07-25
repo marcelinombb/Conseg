@@ -5,7 +5,6 @@ namespace MF\Controller;
 abstract class Action {
 
 	public $view;
-	private $buscas;
 
 	public function __construct() {
 		$this->view = new \stdClass();
@@ -30,26 +29,6 @@ abstract class Action {
 		$classAtual = strtolower(str_replace('Controller', '', $classAtual));
 
 		require_once "../App/Views/".$this->view->page.".phtml";
-	}
-
-	/**
-	 * Get the value of buscas
-	 */ 
-	public function getBuscas()
-	{
-		return $this->buscas;
-	}
-
-	/**
-	 * Set the value of buscas
-	 *
-	 * @return  self
-	 */ 
-	public function setBuscas($buscas)
-	{
-		$this->buscas = $buscas;
-
-		return $this;
 	}
 }
 
