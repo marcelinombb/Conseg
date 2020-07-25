@@ -1,78 +1,79 @@
 <html>
-	<head>
-    <meta charset="utf-8" />
-		<title>Conseg</title>
 
- 
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="utf-8" />
+  <title>Conseg</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheat" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
-   
+
   <link href="css/style.css" rel="stylesheet" type="text/css" />
-	</head>
+</head>
 
-  <body>
+<body>
   <nav class="navbar navbar-light bg-light">
-      <a class=" navbar-brand ml-5" href="#"><h1><p>Painel de Buscas Conseg<p></h1></a>
-      <div>
-      <a href="/cadastrarVenda" class="btn btn-primary btn-lg far fa-address-card mr-5"style="font-size:30px"></a>
-      <a href="/sair" class="btn btn-outline-primary fas fa-sign-out-alt mr-2"style="font-size:30px"></a>
-      </div>
-    </nav>
-    <br>
+    <a class=" navbar-brand ml-5" href="#">
+      <h1>
+        <p>Painel de Buscas Conseg<p>
+      </h1>
+    </a>
+    <div>
+      <a href="/cadastrarVenda" class="btn btn-primary btn-lg far fa-address-card mr-5" style="font-size:30px"></a>
+      <a href="/sair" class="btn btn-outline-primary fas fa-sign-out-alt mr-2" style="font-size:30px"></a>
+    </div>
+  </nav>
+  <br>
 
-    
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col">
-          <h3 class="display-4">Consulta de Clientes</h3>
-        </div>
+
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col">
+        <h3 class="display-4">Consulta de Clientes</h3>
       </div>
-    
-      <div class="row  mb-5 col-8">
+    </div>
+
+    <div class="row  mb-5 col-8">
       <form method="get" action="/buscaVenda" class="mt-4 mb-4">
-            <div class="input-group input-group-lg">
-              <input name="pesquisarPor" type="text" class="form-control" placeholder="Digite seu CPF">
-              <div class="input-group-append">
-                <button type="submit" class="btn btn-primary">Buscar</button>
-              </div>
-            </div>
-          </form>
+        <div class="input-group input-group-lg">
+          <input name="pesquisarPor" type="text" class="form-control" placeholder="Digite seu CPF">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+          </div>
         </div>
-     
-      <div class="row">
-        <div class="col">
-          <table class="table" >
-            <thead>
-              <tr>
-                <th>Nome</th>
-                <th>Telefone</th>
-                <th>Endereço</th>
-                <th>Troca do Refil</th>
-              </tr>
-              </thead>
-              <tbody>
-             
-              <tr>
-              <?php foreach((array)$this->view->buscas as $indice_arr => $busca) {  ?>
-                <th> <?= $busca['nome']?> </th>
-                <th>  </th>
-                <th> </th>
-                <th> </th>
-              </tr>
-              <?php } ?>
-              </tbody>
-              </table>            
-        </div>
-      </div>
-            
-     
+      </form>
+    </div>
 
-    
-  </body>	
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Telefone</th>
+              <th>Endereço</th>
+              <th>Troca do Refil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <?php foreach ((array)$this->view->buscas as $indice_arr => $busca) {  ?>
+                <td><?= $busca ?> </td>
+              <?php } ?>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+</body>
 
 </html>
