@@ -1,20 +1,22 @@
 <?php
 
-    namespace App\Controllers;
+namespace App\Controllers;
 
-    use MF\Controller\Action;
-    use MF\Model\Container;
+use MF\Controller\Action;
+use MF\Model\Container;
 
-    class VendaController extends Action {
+class VendaController extends Action
+{
 
-        public function vendas() {
+	public function vendas()
+	{
 
-        $this->render('cadastroVenda');
+		$this->render('cadastroVenda');
+	}
 
-        }
+	public function salvarVenda()
+	{
 
-        public function salvarVenda() {
-            
 		$venda = Container::getModel('Venda');
 
 		$venda->__set('nome', $_POST['nome']);
@@ -62,32 +64,25 @@
 		$venda->__set('proximaTrocadeRefil', $_POST['proximaTrocadeRefil']);
 
 		$venda->salvarVenda();
-          
-    
-            $this->render('/painel');
+
+
+		$this->render('/painel');
+	}
+
+	public function buscaVenda()
+	{
+
+		$pesquisarPor = isset($_GET['pesquisarPor']) ? $_GET['pesquisarPor'] : '';
+
+		echo 'Pesquisando por: ' . $pesquisarPor;
+
+		//	$pesquisarPor = array();
+
+		if ($pesquisarPor != '') {
+			$busca = Container::getModel('Venda');
+			$busca->__set('cpf', $pesquisarPor);
+			$buscas = $busca->getAll();
 		}
-
-		public function buscaVenda() {
-
-			$pesquisarPor = isset($_GET['pesquisarPor']) ? $_GET['pesquisarPor'] : '';
-
-			echo 'Pesquisando por: ' .$pesquisarPor;
-
-			//	$pesquisarPor = array();
-	
-			if($pesquisarPor != '') {
-				$busca = Container::getModel('Venda');
-				$busca->__set('cpf', $pesquisarPor);
-				$buscas= $busca->getAll();
-
-				echo '<pre>';
-				//var_dump($buscas['nome']);
-				echo '</pre>';
-			}
-			$buscas = [["nome"=>"xablau"]];
-
-			$this->render('/painel',$buscas);
-			}
-    	}
-
-	
+		$this->render('/painel', $buscas);
+	}
+}
