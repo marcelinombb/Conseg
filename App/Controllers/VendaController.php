@@ -81,13 +81,12 @@
 				$buscas= $busca->getAll();
 
 				echo '<pre>';
-				var_dump($buscas['nome']);
+				//var_dump($buscas['nome']);
 				echo '</pre>';
 			}
+			$buscas = [["nome"=>"xablau"]];
 
-			$this->view->buscas = $buscas;
-
-			$this->render('/painel');
+			$this->render('/painel',$buscas);
 			}
     	}
 

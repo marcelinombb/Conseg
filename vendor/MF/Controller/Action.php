@@ -4,14 +4,15 @@ namespace MF\Controller;
 
 abstract class Action {
 
-	protected $view;
+	public $view;
 
 	public function __construct() {
 		$this->view = new \stdClass();
 	}
 
-	protected function render($view, $layout = 'layout') {
+	protected function render($view,$data=array(), $layout = 'layout') {
 		$this->view->page = $view;
+		$this->view->buscas = $data; 
 
 		if(file_exists("../App/Views/".$layout.".phtml")) {
 			require_once "../App/Views/".$layout.".phtml";
