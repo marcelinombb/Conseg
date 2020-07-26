@@ -74,10 +74,6 @@ class VendaController extends Action
 
 		$pesquisarPor = isset($_GET['pesquisarPor']) ? $_GET['pesquisarPor'] : '';
 
-		echo 'Pesquisando por: ' . $pesquisarPor;
-
-		//	$pesquisarPor = array();
-
 		if ($pesquisarPor != '') {
 			$busca = Container::getModel('Venda');
 			$busca->__set('cpf', $pesquisarPor);

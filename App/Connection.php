@@ -6,9 +6,9 @@ class Connection {
 
 	public static function getDb() {
 		try {
-			//retirei a porta pois estava conflitando no meu pc
+	
 			$conn = new \PDO(
-				"mysql:host=localhost;dbname=conseg;charset=utf8",
+				"mysql:host=localhost;dbname=conseg;port=3307;charset=utf8",
 				"root",
 				"" 
 			);
