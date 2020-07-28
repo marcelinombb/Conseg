@@ -211,10 +211,8 @@ class Venda extends Model
 
   public function getAll()
   {
-
     $query = "select nome, telefone_celular, rua_endereco, proximaTrocadeRefil from venda where cpf = :cpf";
     $stmt = $this->db->prepare($query);
-    //sempre que for passar por bind colocar o tipo de dado que vai pro banco
     $stmt->bindValue(':cpf', $this->__get('cpf'), PDO::PARAM_STR);
     if ($stmt->execute()) {
       return $stmt->fetch(\PDO::FETCH_ASSOC);

@@ -10,13 +10,11 @@ class VendaController extends Action
 
 	public function vendas()
 	{
-
 		$this->render('cadastroVenda');
 	}
 
 	public function salvarVenda()
 	{
-
 		$venda = Container::getModel('Venda');
 
 		$venda->__set('nome', $_POST['nome']);
@@ -65,13 +63,11 @@ class VendaController extends Action
 
 		$venda->salvarVenda();
 
-
 		$this->render('/painel');
 	}
 
 	public function buscaVenda()
 	{
-
 		$pesquisarPor = isset($_GET['pesquisarPor']) ? $_GET['pesquisarPor'] : '';
 
 		if ($pesquisarPor != '') {
