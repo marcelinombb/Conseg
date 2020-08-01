@@ -2,21 +2,18 @@
 
 namespace App;
 
-class Connection {
+use \PDO;
 
-	public static function getDb() {
+class Connection
+{
+
+	public static function getDb()
+	{
 		try {
-	
-			$conn = new \PDO(
-				"mysql:host=localhost;dbname=conseg;port=3307;charset=utf8",
-				"root",
-				"" 
-			);
-
+			$conn = new PDO("mysql:host=127.0.0.1;dbname=conseg","root","");
 			return $conn;
-
 		} catch (\PDOException $exception) {
-			return'Connection failed: ' . $exception->getMessage();
+			return 'Connection failed: ' . $exception->getMessage();
 		}
 	}
 }

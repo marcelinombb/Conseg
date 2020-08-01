@@ -14,8 +14,8 @@ abstract class Action {
 		$this->view->page = $view;
 		$this->view->buscas = $data; 
 
-		if(file_exists("../App/Views/".$layout.".phtml")) {
-			require_once "../App/Views/".$layout.".phtml";
+		if(file_exists("App/Views/".$layout.".phtml")) {
+			require_once "App/Views/".$layout.".phtml";
 		} else {
 			$this->content();
 		}
@@ -28,7 +28,7 @@ abstract class Action {
 
 		$classAtual = strtolower(str_replace('Controller', '', $classAtual));
 
-		require_once "../App/Views/".$this->view->page.".phtml";
+		require_once "App/Views/".$this->view->page.".phtml";
 	}
 }
 
